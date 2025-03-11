@@ -13,8 +13,8 @@ namespace BaitapLuongandDaLuong
         {
             Thread thread = new Thread(() => 
             Console.WriteLine("Hello, World!")); // thực thi hành động 
-            thread.Start(); // kích hoạt luồng thread 
-            thread.Join();
+            thread.Start(); // kích hoạt luồng thread , và chỉ có thể gọi 1 lần 
+            thread.Join(); //Chờ luồng kết thúc , trước khi tiếp tục chương trình
         }
     }
 }

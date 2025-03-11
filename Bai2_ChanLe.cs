@@ -12,7 +12,7 @@ namespace BaitapLuongandDaLuong
     {
         public static void Run()
         {
-            Thread evenThread = new Thread(() =>
+            Thread SOCHAN = new Thread(() =>
             {
                 StringBuilder Sochan = new StringBuilder("Số chẵn: ");
                 for (int i = 0; i <= 20; i ++)
@@ -25,24 +25,24 @@ namespace BaitapLuongandDaLuong
                 Console.WriteLine(Sochan.ToString().Trim());
             });
 
-            Thread oddThread = new Thread(() =>
+            Thread SOLE = new Thread(() =>
             {
-                StringBuilder oddNumbers = new StringBuilder("Số lẻ: ");
+                StringBuilder Sole = new StringBuilder("Số lẻ: ");
                 for (int i = 0; i <= 20; i ++)
                 {
                     if(i%2 !=0)
                     {
-                        oddNumbers.Append(i + " ");
+                       Sole.Append(i + " ");
                     }
                 }
-                Console.WriteLine(oddNumbers.ToString().Trim());
+                Console.WriteLine(Sole.ToString().Trim());
             });
 
-            evenThread.Start();
-            oddThread.Start();
+            SOCHAN.Start();
+            SOLE.Start();
 
-            evenThread.Join();
-            oddThread.Join();
+            SOCHAN.Join();
+            SOLE.Join();
         }
     }
 }
