@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading;
 using BaitapLuongandDaLuong;
 
@@ -6,6 +7,8 @@ class Program
 {
     static void Main()
     {
+        Console.InputEncoding = Encoding.UTF8;
+        Console.OutputEncoding = Encoding.UTF8;
         int choice;
         do
         {
@@ -41,6 +44,16 @@ class Program
                 case 7: Bai7_TaoTaiKhoanNganHang.Run(); break;
                 case 8: Bai8_LuongTangBien.Run(); break;
                 case 9: Bai9_TaoKichBan.Run(); break;
+                case 10: Bai10_DongBoHoa.Run(); break;
+                case 11: Bai11_DongBoHoaThoiDiem.Run(); break;
+                case 12: Bai12_TruyCapDocGhi.Run(); break;
+                case 13: Bai13_InTenLuong.Run(); break;
+                case 14: Bai14_TaiXuongFile.Run(); break;
+                case 15: Bai15_ChanLe30Den50.Run(); break;
+                case 16: Bai16_GiaiThua.Run(); break;
+                case 17: Bai17_MergeSort.Run(); break;
+                case 18: Bai18_QuickSort.Run(); break;
+                case 19: Bai19_YeuCauHTTP.Run(); break;
                 case 0: Console.WriteLine("Thoát chương trình..."); break;
                 default: Console.WriteLine("Lựa chọn không hợp lệ!"); break;
             }
