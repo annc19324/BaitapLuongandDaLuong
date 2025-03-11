@@ -6,6 +6,8 @@ namespace BaitapLuongandDaLuong
     class Bai17_MergeSort
     {
         public static void Run()
+            //Viết một chương trình để triển khai
+            //thuật toán sắp xếp hợp nhất(merge sort) đa luồng.
         {
             int[] arr = { 5, 3, 8, 1, 9, 2 };
             MergeSort(arr, 0, arr.Length - 1);

@@ -5,6 +5,8 @@ namespace BaitapLuongandDaLuong
 {
     class Bai10_DongBoHoa
     {
+        //10. Viết một chương trình để đồng bộ hóa
+        //quyền truy cập vào một tài nguyên được chia sẻ giữa nhiều luồng.
         private static int sharedResource = 0;
         private static object lockObject = new object();
 

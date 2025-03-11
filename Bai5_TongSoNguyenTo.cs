@@ -11,9 +11,8 @@ namespace BaitapLuongandDaLuong
     {
         public static void Run()
         {
-            int limit = 100;
+            int limit = 10;
             int sum = 0;
-            object lockObj = new object();
 
             Thread evenThread = new Thread(() =>
             {
@@ -21,7 +20,7 @@ namespace BaitapLuongandDaLuong
                 {
                     if (IsPrime(i))
                     {
-                        lock (lockObj) sum += i;
+                        sum += i;
                     }
                 }
             });
@@ -32,7 +31,7 @@ namespace BaitapLuongandDaLuong
                 {
                     if (IsPrime(i))
                     {
-                        lock (lockObj) sum += i;
+                        sum += i;
                     }
                 }
             });

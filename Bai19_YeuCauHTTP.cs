@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using static System.Net.WebRequestMethods;
 
 namespace BaitapLuongandDaLuong
 {
@@ -8,7 +9,8 @@ namespace BaitapLuongandDaLuong
     {
         public static void Run()
         {
-            string[] urls = { "https://example.com", "https://example.org", "https://example.net" };
+            //19.Viết một chương trình thực hiện các yêu cầu HTTP đồng thời bằng luồng.
+            string[] urls = { "https://facebook.com", "https://youtube.com", "https://instagram.com" };
 
             Parallel.ForEach(urls, url =>
             {

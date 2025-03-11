@@ -7,6 +7,8 @@ namespace BaitapLuongandDaLuong
     {
         public static void Run()
         {
+            //15.Viết một chương trình tạo hai luồng
+            //để tìm và in các số chẵn và lẻ từ 30 đến 50.
             Thread evenThread = new Thread(() =>
             {
                 for (int i = 30; i <= 50; i++)

@@ -19,7 +19,7 @@ namespace BaitapLuongandDaLuong
             {
                 lock (lockObj)
                 {
-                    queue.Enqueue(new Random().Next(100));
+                    queue.Enqueue(new Random().Next(10));
                     Console.WriteLine("Sản xuất sản phẩm");
                     Monitor.Pulse(lockObj);
                 }
@@ -34,7 +34,7 @@ namespace BaitapLuongandDaLuong
                 }
             });
 
-            producer.Start();
+            producer.Start();       
             consumer.Start();
 
             producer.Join();

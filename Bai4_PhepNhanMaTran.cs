@@ -9,6 +9,7 @@ namespace BaitapLuongandDaLuong
         static int[,] B = { { 5, 6 }, { 7, 8 } }; // Ma trận B (2x2)
         static int[,] C = new int[2, 2]; // Ma trận kết quả C (2x2)
 
+
         public static void Run()
         {
             int rows = A.GetLength(0); // Số hàng của A
@@ -24,6 +25,8 @@ namespace BaitapLuongandDaLuong
                     int row = i, col = j; // Cần dùng biến local để tránh lỗi capture biến vòng lặp
                     threads[i, j] = new Thread(() =>
                     {
+                        //A = 1 2   B = 5 6
+                        //    3 4       7 8
                         C[row, col] = 0;
                         for (int k = 0; k < A.GetLength(1); k++) // Duyệt qua các phần tử hàng của A và cột của B
                         {

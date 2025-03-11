@@ -12,7 +12,7 @@ namespace BaitapLuongandDaLuong
     {
         public static void Run()
         {
-            string[] urls = { "https://example.com", "https://example.org" };
+            string[] urls = { "https://www.facebook.com/", "https://www.instagram.com/" };
             Thread[] threads = new Thread[urls.Length];
 
             for (int i = 0; i < urls.Length; i++)
@@ -22,7 +22,7 @@ namespace BaitapLuongandDaLuong
                 {
                     HttpClient client = new HttpClient();
                     string content = client.GetStringAsync(urls[index]).Result;
-                    Console.WriteLine($"Nội dung {urls[index]}: {content.Substring(0, 50)}...");
+                    Console.WriteLine($"Nội dung:\n {urls[index]}: {content.Substring(0, 100)}...");
                 });
                 threads[i].Start();
             }

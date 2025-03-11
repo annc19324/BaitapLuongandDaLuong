@@ -6,6 +6,7 @@ namespace BaitapLuongandDaLuong
     class Bai13_InTenLuong
     {
         public static void Run()
+            //13. Viết một chương trình để tạo nhiều luồng và in tên của chúng.
         {
             Thread[] threads = new Thread[5];
 

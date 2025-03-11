@@ -10,7 +10,6 @@ namespace BaitapLuongandDaLuong
     class Bai8_LuongTangBien
     {
         private static int counter = 0;
-        private static object lockObj = new object();
 
         public static void Run()
         {
@@ -20,7 +19,7 @@ namespace BaitapLuongandDaLuong
             {
                 threads[i] = new Thread(() =>
                 {
-                    lock (lockObj) counter++;
+                    counter++;
                 });
                 threads[i].Start();
             }

@@ -5,7 +5,9 @@ namespace BaitapLuongandDaLuong
 {
     class Bai18_QuickSort
     {
-        public static void Run()
+     //18. Viết một chương trình
+     //để triển khai thuật toán sắp xếp nhanh(quicksort) đa luồng. 
+            public static void Run()
         {
             int[] arr = { 5, 3, 8, 1, 9, 2 };
             QuickSort(arr, 0, arr.Length - 1);
